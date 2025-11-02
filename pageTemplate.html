@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styleTemplate.css">
+</head>
+<body>
+
+  <header>
+    <!-- Datum heute -->
+    {{datum_heute}}
+  </header>
+
+  <main>
+    <!-- Linke Spalte - Wetter -->
+    <div class="column left">
+      <!-- aktuelles Wetter -->
+      <div class="top">
+        <img src="{{weather_icon_current}}" alt="weather_icon_current" class="current-weather-icon">
+        <div class="current-weather-temp"> {{weather_temp_current}}&deg;C</div>
+        <div class="current-weather-temp-small">{{weather_temp_min_current}}&deg;C / {{weather_temp_max_current}}&deg;C</div>
+        <div class="current-weather-details">
+          <img src="svg/wi-raindrops.svg">
+          {{weather_precipitation_current}} mm
+        </div>
+        <div class="current-weather-details">
+          <img src="svg/wi-strong-wind.svg">
+          {{weather_wind_speed_current}} m/s aus {{weather_wind_direction_current}}&deg;
+        </div>
+      </div>
+      <div class="bottom">
+        <!-- Wetter morgen -->
+        <div class="sub-left">
+          <div class="forecast-weather-date">{{datum_plus_1}}</div>
+          <img src="{{weather_icon_plus_1}}" alt="weather_icon_plus_1" class="forecast-weather-icon">
+          <div class="forecast-weather-temp">{{weather_temp_min_plus_1}}&deg;C / {{weather_temp_max_plus_1}}&deg;C</div>
+        </div>
+        <!-- Wetter übermorgen -->
+        <div class="sub-center">
+          <div class="forecast-weather-date">{{datum_plus_2}}</div>
+          <img src="{{weather_icon_plus_2}}" alt="weather_icon_plus_2" class="forecast-weather-icon">
+          <div class="forecast-weather-temp">{{weather_temp_min_plus_2}}&deg;C / {{weather_temp_max_plus_2}}&deg;C</div>
+        </div>
+        <!-- Wetter überübermorgen -->
+        <div class="sub-right">
+          <div class="forecast-weather-date">{{datum_plus_3}}</div>
+          <img src="{{weather_icon_plus_3}}" alt="weather_icon_plus_3" class="forecast-weather-icon">
+          <div class="forecast-weather-temp">{{weather_temp_min_plus_3}}&deg;C / {{weather_temp_max_plus_3}}&deg;C</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rechte Spalte - Kalender -->
+    <div class="column right">
+      <div class="top">
+        {{kalender}}
+        {{muellmorgen}}
+      </div>
+      <div class="bottom">
+        <div class="sub-left">
+          {{kalender_plus_1}}
+        </div>
+        <div class="sub-right">
+          {{kalender_plus_2}}
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
