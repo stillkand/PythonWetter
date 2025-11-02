@@ -1,2 +1,9 @@
+# Python Cache
+__pychache__/
+*.py[cod]
+
+# VS Code Settings
+.vscode/
+
 test.png
 page.html
