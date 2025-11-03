@@ -1,0 +1,146 @@
+/* Grundlayout */
+body {
+  margin: 0;  
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Oberer Datumsstreifen */
+header {
+  text-align: center;
+  vertical-align: center;
+  font-size: 5vh;  
+  font-weight: bold;
+  height: 7vh;
+}
+
+/* Hauptbereich mit zwei Spalten */
+main {
+  display: flex;
+  flex: 1;
+  height: 93vh; /* Platz abzüglich Header */
+  text-align: center;
+}
+
+/* Hauptspalten */
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.left {
+  padding: 1vh;
+}
+
+.right {
+  padding: 1vh;
+}
+
+/* Oberer (scrollbarer) Bereich */
+.top {
+  flex: 1;
+  overflow-y: auto;  
+  box-sizing: border-box;
+  font-size: 4vh;
+}
+
+/* Aktuelles Wetter */
+.current-weather-icon {
+  width: 100%;
+  height: auto;
+  max-height: 40vh;
+}
+.current-weather-temp {
+  font-size: 4vh;
+  font-weight: bold;
+}
+.current-weather-temp-small {
+  font-size: 2vh;
+}
+.current-weather-details {
+  display: flex;
+  justify-content: center;
+  font-size: 3vh;
+  gap: 5px;
+}
+.current-weather-details img {
+  height: auto;
+  max-height: 5vh;
+}
+
+/* Wettervorhersage */
+.forecast-weather-date, .forecast-weather-temp {
+    font-size: 2vh;
+}
+.forecast-weather-icon {
+  width: 50%;
+  height: auto;
+  max-height: 10vh;
+  padding: 1vh;
+}
+
+/* Fixierter unterer Bereich */
+.bottom {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  box-sizing: border-box;
+  height: 30vh;
+  font-size: 2vh;
+}
+
+/* Unterteilung im unteren Bereich */
+.sub-left, .sub-center, .sub-right {
+  flex: 1;
+  background-color: transparent;
+  padding: 2vh;
+}
+
+
+
+table {
+  margin: auto;
+  border-collapse: collapse;
+  color: black;
+  font-size: 0.5em;
+}
+caption {
+  font-size: 2em;
+  font-weight: bold;
+}
+th {
+  /*border: 1px solid black;*/
+  padding: 0.5vw;
+}
+td {
+  border: 1px solid black;
+  font-size: 1.5em;
+  width: 3em;
+  height: 2em;
+}
+td.today {
+  border: 5px solid red;
+}
+td.feiertag {
+  font-weight: bold;
+  color: red;
+}
+td.weekend {
+  font-weight: bold;
+}
+.marker {
+  display: block;
+  font-size: 0.5em;
+}
+p.muellmorgen {
+  background: red;
+  color: white;
+  font-weight: bold;
+  padding: 0.5vh;
+}
